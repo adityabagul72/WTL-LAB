@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>ISHAN Hair Saloon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .navbar {
+            height: 60px;
+            /* background-color: rgb(12, 0, 87); */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .main-content {
+            background-color: black;
+            background-image: url("https://imgs.search.brave.com/GtVz6ENQmsAaVDkv5UssbRcI_wAk4wiIMNeI9Bx8im0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzkwLzc4Lzg1/LzM2MF9GXzg5MDc4/ODU4OV91TWlPTHlv/bTdTakxNcUc0ODBr/ZzBlOVRRZlVIUzNz/OS5qcGc");
+            height: 500px;
+            text-align: center;
+            padding: 50px;
+        }
+        .footer {
+            text-align: center;
+            background-color:white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo tracking-tighter">ISHAN Saloon</div>
+        <div class="nav-links">
+            <a href="#" class="text-black">Home</a>
+            <a href="#">About</a>
+            <a href="#">
+            <select name="Services" id="Services">
+                    <option value="">Services</option>
+                    <option value="o-1">two-Side</option>
+                    <option value="o-2">Honey-cut</option>
+            </select>
+            </a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <h1 class="text-white text-4xl font-bold tracking-tighter">Welcome to Our ISHAN SALOON</h1>
+        <p>We provide the best services for your hairs. Explore and enjoy our offerings.</p>
+    </div>
+    
+    <div class="footer">
+        <p>Written by Rutvik Kadam &copy; 2025</p>
+    </div>
+</body>
+</html>
