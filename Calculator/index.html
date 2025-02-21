@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Addition Calculator</title>
+</head>
+<body>
+<center>
+    <div>
+        <h3>Simple Addition Calculator</h3>
+        Enter number1: <input type="number" id="num1" onfocus="setInput('num1')"><br>
+        Enter number2: <input type="number" id="num2" onfocus="setInput('num2')"><br><br>
+
+        <button onclick="calculateAddition()">+</button>
+        <button onclick="calculateAddition()">-</button>
+        <button onclick="calculateAddition()">*</button> 
+        <button onclick="calculateAddition()">/</button> 
+        <br>
+        <div>
+            <br>
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button> <br>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button> <br>
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button> <br>
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="clearInputs()">C</button>
+        </div>
+       
+    </div>
+    <h3 id="result">Your Result is: </h3>
+</center>
+    <script>
+        let selectedInput = 'num1';
+
+        function setInput(inputId) {
+            selectedInput = inputId; 
+        }
+
+        function appendNumber(number) {
+            let inputField = document.getElementById(selectedInput);
+            inputField.value += number;
+        }
+
+        function calculateAddition() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let result = document.getElementById('result');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result.innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            let sum = num1 + num2;
+            result.innerText = "Your Result is: " + sum;
+        }
+
+        function clearInputs() {
+            document.getElementById('num1').value = "";
+            document.getElementById('num2').value = "";
+            document.getElementById('result').innerText = "Your Result is:";
+            selectedInput = 'num1'; 
+        }
+    </script>
+</body>
+</html>
