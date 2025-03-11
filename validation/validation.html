@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Validation</title>
+</head>
+
+<body class="bg-slate-950 text-white">
+    <div class="text-center">
+        <form action="">
+            <h1 class="text-3xl mt-40 font-normal tracking-tighter ml-14 mb-2 text-yellow-500">Registration Form</h1>
+            firstname <input class=" p-1 mt-1 text-white bg-transparent rounded-md border-2 border-white" type="text"
+                name="fname" id="fname"> <br>
+            lastname <input class="p-1 mt-1 text-white bg-transparent rounded-md border-2 border-white"" type=" text"
+                name="lname" id="lname"> <br>
+            <span class="ml-9">age </span> <input
+                class="p-1 mt-1  text-white bg-transparent rounded-md border-2 border-white" type="number" name="age"
+                id="age"> <br>
+            <input class="bg-yellow-500 mt-2 p-2 ml-16 rounded-xl" type="submit" value="Submit" onclick="validateInp()">
+        </form>
+    </div>
+</body>
+<script>
+    function validateInp(event) {
+        let fname = document.getElementById('fname')
+        let lname = document.getElementById('lname')
+        let age = document.getElementById('age')
+
+        if (fname.value === "") {
+            alert("enter firstname")
+        }
+        if (lname.value === "") {
+            alert("enter lastname")
+        }
+        if (age.value === "") {
+            alert("enter age")
+        }
+        if (age.value >= 300) {
+            alert("you are robot")
+        }
+    }
+</script>
+
+</html>

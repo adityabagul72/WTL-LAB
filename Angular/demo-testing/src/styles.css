@@ -1,0 +1,51 @@
+/* styles.css */
+nav {
+    padding: 10px;
+    background: #f0f0f0;
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a.active {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
